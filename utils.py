@@ -1,12 +1,12 @@
 import os
 
-def clear():
-    os.system("cls" if os.name == 'nt' else "clear")
 
-def pause():
-    input("Pressione ENTER para continuar...")
+def clear():
+    clear = 'cls' if os.name == 'nt' else 'clear'
+    os.system(clear)
+
 
 def header():
-    print("**************************************************************")
-    print("************** School of Net - Caixa Eletrônico **************")
-    print("**************************************************************")
+    print("****************************************")
+    print("*** School of Net - Caixa Eletrônico ***")
+    print("****************************************")

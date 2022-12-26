@@ -1,3 +1,1 @@
-# iniciando-na-pratica
-
-Programa de contas bancárias para estudo de python.
+Esse código foi utilizado para a criação do curso [Python - Boas práticas e gerenciamento de arquivos](https://www.schoolofnet.com/curso/python/linguagem-python/python-boas-praticas-e-gerenciamento-de-arquivos/) da School of Net.

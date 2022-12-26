@@ -1,24 +1,30 @@
 import utils
 import operations
-#%%
-def main():    
-    utils.header()
+from bank_account_variables import money_slips, accounts_list
+from file import load_bank_data
 
-    account_auth = operations.auth_account()    
+
+def main():
+    load_bank_data()
+    print(money_slips)
+    print(accounts_list)
+    utils.header()
+    account_auth = operations.auth_account()
+
     if account_auth:
         utils.clear()
-        utils.header()
-        
-        option_typed = operations.get_menu_options_typed(account_auth)
 
+        utils.header()
+        option_typed = operations.get_menu_options_typed(account_auth)
         operations.do_operation(option_typed, account_auth)
     else:
-        print('Conta Inválida')  
+        print('Conta inválida')
 
 
-while True:
-    main()
+if __name__ == '__main__':
+    while True:
+        main()
 
-    utils.pause()
+        input('Pressione <ENTER> para continuar...')  # pause do programa
 
-    utils.clear()
+        utils.clear()
