@@ -1,30 +1,17 @@
-import utils
-import operations
-from bank_account_variables import money_slips, accounts_list
-from file import load_bank_data
-
+from utils import clear, header
+from console import CashMachineConsole
 
 def main():
-    load_bank_data()
-    print(money_slips)
-    print(accounts_list)
-    utils.header()
-    account_auth = operations.auth_account()
+  clear()
 
-    if account_auth:
-        utils.clear()
+  header()
 
-        utils.header()
-        option_typed = operations.get_menu_options_typed(account_auth)
-        operations.do_operation(option_typed, account_auth)
-    else:
-        print('Conta inválida')
+  CashMachineConsole.get_menu_options_typed()
 
+  #logica do cx eletronico
 
 if __name__ == '__main__':
-    while True:
-        main()
+  while True:
+    main()
 
-        input('Pressione <ENTER> para continuar...')  # pause do programa
-
-        utils.clear()
+    input("Pressione <Enter> para continuar...")
